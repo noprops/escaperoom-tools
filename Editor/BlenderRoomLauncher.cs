@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using UnityEditor;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -151,7 +150,7 @@ public class BlenderRoomLauncher : EditorWindow
     /// </summary>
     private static string GetPythonScriptPath()
     {
-        var pkgInfo = PackageInfo.FindForAssembly(Assembly.GetExecutingAssembly());
+        var pkgInfo = UnityEditor.PackageManager.PackageInfo.FindForAssembly(Assembly.GetExecutingAssembly());
         if (pkgInfo != null)
             return Path.Combine(pkgInfo.resolvedPath, "SourceAssets~",
                 "blender_collection_hierarchy_fbx_export.py");

@@ -130,11 +130,13 @@ public class RoomFbxPostProcessor : AssetPostprocessor
         }
 
         // 2. Lighting Settings: Baked GI 有効 + Mixed Lighting = Baked Indirect
-        if (!LightmapEditorSettings.bakedGI ||
-            LightmapEditorSettings.mixedBakeMode != MixedLightingMode.IndirectOnly)
+        var lightingSettings = Lightmapping.lightingSettings;
+        if (lightingSettings != null &&
+            (!lightingSettings.bakedGI ||
+             lightingSettings.mixedBakeMode != MixedLightingMode.IndirectOnly))
         {
-            LightmapEditorSettings.bakedGI       = true;
-            LightmapEditorSettings.mixedBakeMode = MixedLightingMode.IndirectOnly;
+            lightingSettings.bakedGI       = true;
+            lightingSettings.mixedBakeMode = MixedLightingMode.IndirectOnly;
             Debug.Log("[RoomFbxPostProcessor] Lighting を Baked Indirect (Mixed) に設定しました。");
         }
 
