@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Unity generated
+*.meta
+*.pidb
+*.suo
+*.user
+*.csproj
+*.sln
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo

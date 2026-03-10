@@ -1,0 +1,11 @@
+{
+  "name": "com.masanori.escaperoom-tools",
+  "version": "1.0.0",
+  "displayName": "Escape Room Tools",
+  "description": "Blender to Unity room import automation for escape room projects. Includes FBX post-processing, lighting setup, and Blender batch export launcher.",
+  "unity": "6000.0",
+  "author": {
+    "name": "masanori"
+  },
+  "dependencies": {}
+}
