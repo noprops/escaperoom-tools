@@ -33,7 +33,7 @@ public class BlenderRoomLauncher : EditorWindow
 
         string projectRoot = Path.GetFullPath(Path.Combine(Application.dataPath, ".."));
         win._blendFilePath = Path.Combine(projectRoot, "SourceAssets", "Room.blend");
-        win._exportDir     = Path.Combine(Application.dataPath, "0", "FBX");
+        win._exportDir     = Path.Combine(Application.dataPath, "FBX");
     }
 
     private void OnGUI()

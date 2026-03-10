@@ -8,7 +8,7 @@ using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// Assets/0/FBX/ 以下の FBX をインポートしたとき自動処理を行う。
+/// Assets/FBX/ 以下の FBX をインポートしたとき自動処理を行う。
 ///
 /// [FBX アセット側]
 /// - root.localScale を Vector3.one にリセット (Blender UnitScaleFactor=100 補正)
@@ -27,7 +27,7 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class RoomFbxPostProcessor : AssetPostprocessor
 {
-    private const string WatchFolder = "Assets/0/FBX";
+    private const string WatchFolder = "Assets/FBX";
     private const string DynSuffix   = "_DYN";
 
     // -------------------------------------------------------

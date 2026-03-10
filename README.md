@@ -36,11 +36,11 @@ Launches Blender in background to export a collection hierarchy as FBX.
 1. Set **Blender executable path** (default: `/Applications/Blender.app/Contents/MacOS/Blender`)
 2. Set **.blend file** (default: `<ProjectRoot>/SourceAssets/Room.blend`)
 3. Set **Collection name** to export (default: `Root`)
-4. Set **Export folder** (default: `Assets/0/FBX/`)
+4. Set **Export folder** (default: `Assets/FBX/`)
 
-### Room FBX Post Processor (automatic on FBX import under `Assets/0/FBX/`)
+### Room FBX Post Processor (automatic on FBX import under `Assets/FBX/`)
 
-Runs automatically whenever an FBX is imported into `Assets/0/FBX/`.
+Runs automatically whenever an FBX is imported into `Assets/FBX/`.
 
 **Per-FBX:**
 - Resets `root.localScale` to `Vector3.one` (compensates Blender UnitScaleFactor=100)
@@ -74,16 +74,15 @@ Floor_01           ← static
 
 ## Project Folder Convention
 
-The post processor watches `Assets/0/FBX/`. Create this folder in new projects and place exported FBX files there.
+The post processor watches `Assets/FBX/`. Create this folder in new projects and place exported FBX files there.
 
 ```
 Assets/
-  0/
-    FBX/
-      Room.fbx
-      Textures/
-        Mat_Wall_BaseMap.png
-        Mat_Wall_BumpMap.png
+  FBX/
+    Room.fbx
+    Textures/
+      Mat_Wall_BaseMap.png
+      Mat_Wall_BumpMap.png
 ```
 
 ## License
